@@ -1,0 +1,14 @@
+server:
+  port: 9080
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 8
+      maximumSize: 8
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
